@@ -179,11 +179,11 @@ Presto 向支持 SQL 的平台提供越来越多的数据，并将查询扩展�
 
 ### 社区沟通
 
-{% embed url="https://prestosql.slack.com" %}
+[https://prestosql.slack.com/](https://prestosql.slack.com/)
 
 ### 源代码、许可证、版本管理
 
-{% embed url="https://github.com/prestosql/presto" %}
+[https://github.com/prestosql/presto](https://github.com/prestosql/presto)
 
 ### 贡献代码
 
@@ -191,7 +191,7 @@ Presto 向支持 SQL 的平台提供越来越多的数据，并将查询扩展�
 
 ### 本书原版仓库
 
-{% embed url="https://github.com/prestosql/presto-the-definitive-guide" %}
+[https://github.com/prestosql/presto-the-definitive-guide](https://github.com/prestosql/presto-the-definitive-guide)
 
 ### Iris 数据集
 
