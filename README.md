@@ -18,6 +18,10 @@
 
 本译文只供学习研究参考之用，不得公开传播发行或用于商业用途。有能力阅读英文书籍者请购买正版支持。
 
+## 推荐使用 Gitbook 阅读
+
+[https://emhlbmc.gitbook.io/presto-the-definitive-guide-zh](https://emhlbmc.gitbook.io/presto-the-definitive-guide-zh/)
+
 ## 本书目录
 
 * [一、开始使用 Presto](getting-started-with-presto/README.md)
@@ -38,7 +42,5 @@
   * [13. 真实案例](presto-in-real-world-uses/real-world-examples.md)
   * [14. 总结](presto-in-real-world-uses/conclusion.md)
 
-## 推荐使用 Gitbook 阅读
-
-[https://emhlbmc.gitbook.io/presto-the-definitive-guide-zh](https://emhlbmc.gitbook.io/presto-the-definitive-guide-zh/)
+> 欢迎参与贡献！
 
