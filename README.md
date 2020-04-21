@@ -20,7 +20,23 @@
 
 ## 本书目录
 
-[https://github.com/emhlbmc/presto-the-definitive-guide-zh/blob/master/SUMMARY.md](https://github.com/emhlbmc/presto-the-definitive-guide-zh/blob/master/SUMMARY.md)
+* [一、开始使用 Presto](getting-started-with-presto/README.md)
+  * [1. Presto 介绍](getting-started-with-presto/introducing-presto.md)
+  * [2. Presto 安装配置](getting-started-with-presto/installing-and-configuring-presto.md)
+  * [3. 使用 Presto](getting-started-with-presto/using-presto.md)
+* [二、深入理解 Presto](diving-deeper-into-presto/README.md)
+  * [4. Presto 技术架构](diving-deeper-into-presto/presto-architecture.md)
+  * [5. 生产环境部署](diving-deeper-into-presto/production-ready-deployment.md)
+  * [6. 连接器](diving-deeper-into-presto/connectors.md)
+  * [7. 高级连接器示例](diving-deeper-into-presto/advanced-connector-examples.md)
+  * [8. 在 Presto 中使用 SQL](diving-deeper-into-presto/using-sql-in-presto.md)
+  * [9. 高级 SQL](diving-deeper-into-presto/advanced-sql.md)
+* [三、Presto 实际使用](presto-in-real-world-uses/README.md)
+  * [10. 安全性](presto-in-real-world-uses/security.md)
+  * [11. Presto 与其他工具集成](presto-in-real-world-uses/integrating-presto-with-other-tools.md)
+  * [12. 生产环境使用](presto-in-real-world-uses/presto-in-production.md)
+  * [13. 真实案例](presto-in-real-world-uses/real-world-examples.md)
+  * [14. 总结](presto-in-real-world-uses/conclusion.md)
 
 ## 推荐使用 Gitbook 阅读
 
