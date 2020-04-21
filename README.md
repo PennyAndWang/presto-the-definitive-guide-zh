@@ -20,7 +20,7 @@
 
 ## 本书目录
 
-{% embed url="https://github.com/emhlbmc/presto-the-definitive-guide-zh/blob/master/SUMMARY.md" %}
+[https://github.com/emhlbmc/presto-the-definitive-guide-zh/blob/master/SUMMARY.md](https://github.com/emhlbmc/presto-the-definitive-guide-zh/blob/master/SUMMARY.md)
 
 ## 推荐使用 Gitbook 阅读
 
