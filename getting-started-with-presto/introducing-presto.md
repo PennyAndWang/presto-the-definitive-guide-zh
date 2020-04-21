@@ -254,3 +254,9 @@ Facebook 的数据分析师使用 Hive 在其大型数据仓库上运行交互�
 
 如今，Presto 社区蓬勃发展并蓬勃发展，许多知名公司继续广泛使用Presto。该项目由来自世界各地许多公司（包括阿里巴巴集团，亚马逊，Appian，Gett，Google，Facebook，Hulu，Line，LinkedIn，Lyft，Motorola，Qubole，Red Hat，Salesforce， Starburst，Twitter，Uber，Varada，沃尔玛 和 Zoho。
 
+## 总结
+
+在本章中，我们向您介绍了 Presto。 您了解了有关其某些功能的更多信息，我们一起探讨了可能的用例。
+
+在第 2 章中，您将启动并运行 Presto，连接数据源，并了解如何查询数据。
+
