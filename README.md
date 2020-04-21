@@ -24,7 +24,7 @@
 
 ## 本书目录
 
-* [一、开始使用 Presto](getting-started-with-presto/README.md)
+* [一、开始使用 Presto](getting-started-with-presto/)
   * [1. Presto 介绍](getting-started-with-presto/introducing-presto.md)
   * [2. Presto 安装配置](getting-started-with-presto/installing-and-configuring-presto.md)
   * [3. 使用 Presto](getting-started-with-presto/using-presto.md)
