@@ -54,7 +54,7 @@ $ docker rm presto-trial
 presto-trial
 ```
 
-当你需要使用时，可以再次运行该容器。如果不在需要这个 Docker 镜像，请执行删除操作：
+当你需要使用时，可以再次运行该容器。如果不再需要这个 Docker 镜像，请执行删除操作：
 
 ```text
 $ docker rmi prestosql/presto
@@ -86,9 +86,145 @@ OpenJDK 64-Bit Server VM (build 11.0.4+11, mixed mode, sharing)
 
 ### Python
 
+需要 Python 2.6 及以上的环境来运行 Presto。
+
+确认 `python` 已经被安装并可用：
+
+```text
+$ python --version
+Python 2.7.15+
+```
+
+### 安装
+
+Presto 的发行版可以在 Maven 中央仓库找到。服务端安装包后缀为 _tar.gz_。
+
+此处有所有的可用版本列表：
+
+{% embed url="https://repo.maven.apache.org/maven2/io/prestosql/presto-server" %}
+
+版本号越大，版本越新。比如下载 330 版本的 Presto：
+
+```text
+$ wget https://repo.maven.apache.org/maven2/\
+  io/prestosql/presto-server/330/presto-server-330.tar.gz
+```
+
+解压：
+
+```text
+$ tar xvzf presto-server-*.tar.gz
+```
+
+目录结构如下：
+
+_**lib**_
+
+包含组成 Presto 服务的Java（JAR）和所有必需的依赖。
+
+_**plugins**_ 
+
+在每个插件的单独目录中包含 Presto 插件及其依赖项。 Presto 默认情况下包括许多插件，并且也可以添加第三方插件。Presto 允许可插拔组件与 Presto 集成，例如连接器，功能和安全访问控件。
+
+_**bin**_ 
+
+包含 Presto 的启动脚本。这些脚本用于启动，停止，重新启动，终止并获取正在运行的Presto 进程的状态。
+
+_**etc**_ 
+
+这是配置目录。它由用户创建，并提供 Presto 所需的必要配置文件。
+
+_**var**_ 
+
+这是一个数据目录，即日志的存储位置。它是在首次启动 Presto 服务时创建的。默认情况下，它位于安装目录中。我们建议在安装目录之外对其进行配置，以允许在升级期间保留数据。
+
+### 配置
+
+启动 Presto 前，可以配置一系列的文件：
+
+* 日志配置
+* 节点配置
+* JVM 配置
+
+默认情况下这些配置文件都在 _etc_ 目录中。
+
+除 JVM 配置外，所有配置均遵循 Java 属性标准。 作为 Java 属性的一般说明，每个配置参数都以一对字符串的形式存储，格式为 key=value 的多行内容。
+
+在上一节“安装“完成后，你需要生成以下配置文件：
+
+_**etc/config.properties**_
+
+```text
+coordinator=true
+node-scheduler.include-coordinator=true
+http-server.http.port=8080
+query.max-memory=5GB
+query.max-memory-per-node=1GB
+query.max-total-memory-per-node=2GB
+discovery-server.enabled=true
+discovery.uri=http://localhost:8080
+```
+
+_**etc/node.properties**_
+
+```text
+node.environment=demo
+```
+
+_**etc/jvm.config**_
+
+```text
+-server
+-Xmx4G
+-XX:+UseG1GC
+-XX:G1HeapRegionSize=32M
+-XX:+UseGCOverheadLimit
+-XX:+ExplicitGCInvokesConcurrent
+-XX:+HeapDumpOnOutOfMemoryError
+-XX:+ExitOnOutOfMemoryError
+-Djdk.nio.maxCachedBufferSize=2000000
+-Djdk.attach.allowAttachSelf=true
+```
+
+完成配置后 Presto 就已经可以启动了。
+
 ## 添加数据源
+
+尽管 Presto 安装已经准备就绪，但是你还没有开始运行它。毕竟，你希望能够在 Presto中查询某种外部数据。这要求添加配置为目录的数据源。
+
+Presto  catalog 定义了可供用户使用的数据源。数据访问由 catalog 中配置的 Presto 连接器执行，该连接器具有 **connector.name** 属性。catalog 将数据源内的所有 schema 和 table 公开给 Presto。
+
+例如，Hive 连接器将每个 Hive 数据库映射到一个 schema。如果 Hive 数据库 **web** 包含一个名为 **click** 的表，并且 catalog 名为 **sitehive**，则 Hive 连接器将可以使用该表。必须在 catalog 文件中指定 Hive 连接器。可以使用标准名称语法 **catalog.schema.table** 访问 catalog。因此在此示例中，访问表的方式为：**sitehive.web.clicks**。
+
+通过在 etc/catalog 目录中创建 catalog 属性文件来注册 catalog。文件名设置了 catalog 的名称。例如，假设创建目录属性文件 **etc/cdh-hadoop.properties**，**etc/sales.properties**，**etc/web-traffic.properties** 和 **etc/mysql-dev.properties**。然后在Presto 中公开的 catalog 是 **cdh-hadoop**，**sales**，**web-traffic** 和 **mysql-dev**。
+
+可以使用 TPC-H 连接器进行 Presto 示例的首次探索。 TPC-H 连接器内置在 Presto 中，并提供一组架构来支持 TPC Benchmark H（TPC-H）。
+
+要使用 TPC-H 连接器，请创建一个文件：etc/catalog/tpch.properties，在其中配置一个 **tpch** 连接器：
+
+```text
+connector.name=tpch
+```
+
+每一个 catalog 文件都需要配置 `connector.name` 这个属性。其他的属性由连接器的种类决定。这些在 Presto 的使用文档中都有提到。
 
 ## 运行 Presto
 
+当准备好以后，就可以启动 Presto 了。安装目录中配置好了启动脚本，可以这样启动：
+
+```text
+$ bin/launcher run
+```
+
+**run** 命令是将 Presto 在前台启动。日志和其他输出通过 **stdout** 和 **stderr** 的形式生成。当如下内容打印出后，说明 Presto 已经启动成功：
+
+```text
+INFO        main io.prestosql.server.PrestoServer ======== SERVER STARTED
+```
+
+在前台启动 Presto 可以快速验证配置的正确性。使用 Ctrl-C 退出。
+
 ## 总结
+
+你现在已经知道如何安装、配置和启动 Presto 了。
 

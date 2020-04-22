@@ -4,10 +4,6 @@
 
 《Presto: The Definitive Guide》Presto 权威指南中文版
 
-## Github 地址
-
-[https://github.com/emhlbmc/presto-the-definitive-guide-zh](https://github.com/emhlbmc/presto-the-definitive-guide-zh)
-
 ## 书籍信息
 
 ### Oreilly
