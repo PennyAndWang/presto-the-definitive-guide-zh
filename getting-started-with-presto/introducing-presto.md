@@ -24,7 +24,7 @@
 
 Presto 是解决以上问题的高手，同时它能够提供各种高级特性：联合查询不同的系统；并行查询；集群水平扩展；等等。图1-2是 Presto 的 logo。
 
-![&#x56FE; 1-2](../.gitbook/assets/image.png)
+![&#x56FE; 1-2](../.gitbook/assets/image%20%288%29.png)
 
 Presto 是一个开源的分布式 SQL 查询引擎。它是从零开始设计和编写的，可针对各种大小（从千兆字节到PB大小）的不同数据源高效地查询数据。 Presto 打破了使用昂贵的商业解决方案进行快速分析或使用需要大量硬件的缓慢“免费”解决方案之间的错误选择。
 
@@ -44,7 +44,7 @@ Presto 最初旨在查询 HDFS 中的数据，它可以非常有效地完成此�
 
 Presto 会查询数据所处的位置，并且不需要将数据迁移到集中的位置。 因此，Presto 允许查询 HDFS 和其他分布式对象存储系统中的数据。 它允许查询 RDBMS 和其他数据源。这样，它可以真正查询任何位置的数据，因此可以替代传统、昂贵且繁重的提取，转换和加载（ETL）过程。因此，Presto 显然不仅仅是另一个 SQL-on-Hadoop 解决方案。
 
-![&#x56FE; 1-3](../.gitbook/assets/image%20%281%29.png)
+![&#x56FE; 1-3](../.gitbook/assets/image.png)
 
 对象存储系统包括 Amazon Web Services（AWS）简单存储服务（S3），Microsoft Azure Blob 存储，Google Cloud Storage 和与 S3 兼容的存储，例如 MinIO 和 Ceph。 Presto 可以查询传统的 RDBMS，例如 Microsoft SQL Server，PostgreSQL，MySQL，Oracle，Teradata和 Amazon Redshift。Presto 还可以查询 NoSQL 系统，例如 Apache Cassandra，Apache Kafka，MongoDB 或 Elasticsearch。 Presto 几乎可以查询任何内容，并且实际上是一个 SQL-on-Anything 系统。
 
@@ -103,7 +103,7 @@ Presto 允许您像添加任何其他关系数据库一样将任何数据仓库�
 
 另一方面，Presto 允许您将所有这些系统作为数据源连接。它使用标准的美国国家标准学会（ANSI）SQL ，使用 SQL 的所有工具都可以通过它进行查询，如图1-4所示。
 
-![&#x56FE; 1-4](../.gitbook/assets/image%20%282%29.png)
+![&#x56FE; 1-4](../.gitbook/assets/image%20%285%29.png)
 
 有了 Presto，理解不同系统的数据第一次变得容易了。
 

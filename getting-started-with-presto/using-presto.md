@@ -205,7 +205,7 @@ _提示：如果你熟悉不同的 JDBC 实现，你就可以知道 Presto JDBC 
 
 现在你可以在数据库导航中看到 schema 和 table 了，如图3-1。你也可以直接使用 SQL 编辑器，开始使用 Presto 进行查询。
 
-![&#x56FE; 3-1](../.gitbook/assets/image%20%284%29.png)
+![&#x56FE; 3-1](../.gitbook/assets/image%20%282%29.png)
 
 SQuirreL SQL Client 和其他工具也是一样的连接过程。让我们看看如何下载 JDBC 驱动并配置吧！
 
@@ -287,7 +287,7 @@ _**applicationNamePrefix**_
 
 图 3-2 展示了配置好 Presto 连接的 SQuirreL SQL Client，正在进行一些查询：
 
-![&#x56FE; 3-2](../.gitbook/assets/image%20%285%29.png)
+![&#x56FE; 3-2](../.gitbook/assets/image%20%289%29.png)
 
 ## Presto 与 ODBC
 
