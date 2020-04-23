@@ -10,7 +10,7 @@
 
 同时，各种各样的存储系统也越来越多：关系型数据库、非关系型数据库、文档型数据库、K-V型数据库、对象存储系统，等等。它们中的很多系统在当今的技术中都是有必要的，只使用一种存储技术已然不太可能。如 图1-1，处理这些系统是足够让人畏惧的。
 
-![](../.gitbook/assets/figure-1-1.-big-data-can-be-overwhelming.png)
+![&#x56FE; 1-1](../.gitbook/assets/figure-1-1.-big-data-can-be-overwhelming.png)
 
 另外，我们并不能够用统一的标准工具访问这些不同的系统。不同的语言和分析工具各种各样。同时，你的数据分析师可能了解一门语言，那就是 SQL。无数的工具依靠 SQL 来进行分析、报表展示和进行其他商业智能的工作。
 
@@ -24,7 +24,7 @@
 
 Presto 是解决以上问题的高手，同时它能够提供各种高级特性：联合查询不同的系统；并行查询；集群水平扩展；等等。图1-2是 Presto 的 logo。
 
-![](../.gitbook/assets/image.png)
+![&#x56FE; 1-2](../.gitbook/assets/image.png)
 
 Presto 是一个开源的分布式 SQL 查询引擎。它是从零开始设计和编写的，可针对各种大小（从千兆字节到PB大小）的不同数据源高效地查询数据。 Presto 打破了使用昂贵的商业解决方案进行快速分析或使用需要大量硬件的缓慢“免费”解决方案之间的错误选择。
 
@@ -44,7 +44,7 @@ Presto 最初旨在查询 HDFS 中的数据，它可以非常有效地完成此�
 
 Presto 会查询数据所处的位置，并且不需要将数据迁移到集中的位置。 因此，Presto 允许查询 HDFS 和其他分布式对象存储系统中的数据。 它允许查询 RDBMS 和其他数据源。这样，它可以真正查询任何位置的数据，因此可以替代传统、昂贵且繁重的提取，转换和加载（ETL）过程。因此，Presto 显然不仅仅是另一个 SQL-on-Hadoop 解决方案。
 
-![](../.gitbook/assets/image%20%281%29.png)
+![&#x56FE; 1-3](../.gitbook/assets/image%20%281%29.png)
 
 对象存储系统包括 Amazon Web Services（AWS）简单存储服务（S3），Microsoft Azure Blob 存储，Google Cloud Storage 和与 S3 兼容的存储，例如 MinIO 和 Ceph。 Presto 可以查询传统的 RDBMS，例如 Microsoft SQL Server，PostgreSQL，MySQL，Oracle，Teradata和 Amazon Redshift。Presto 还可以查询 NoSQL 系统，例如 Apache Cassandra，Apache Kafka，MongoDB 或 Elasticsearch。 Presto 几乎可以查询任何内容，并且实际上是一个 SQL-on-Anything 系统。
 
@@ -103,7 +103,7 @@ Presto 允许您像添加任何其他关系数据库一样将任何数据仓库�
 
 另一方面，Presto 允许您将所有这些系统作为数据源连接。它使用标准的美国国家标准学会（ANSI）SQL ，使用 SQL 的所有工具都可以通过它进行查询，如图1-4所示。
 
-![](../.gitbook/assets/image%20%282%29.png)
+![&#x56FE; 1-4](../.gitbook/assets/image%20%282%29.png)
 
 有了 Presto，理解不同系统的数据第一次变得容易了。
 
@@ -171,7 +171,7 @@ Presto 向支持 SQL 的平台提供越来越多的数据，并将查询扩展�
 
 ### 官网
 
-![](../.gitbook/assets/image%20%283%29.png)
+![&#x56FE; 1-5](../.gitbook/assets/image%20%283%29.png)
 
 ### 文档
 
