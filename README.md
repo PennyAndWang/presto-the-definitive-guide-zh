@@ -22,6 +22,8 @@
 
 本译文只供学习研究参考之用，不得公开传播发行或用于商业用途。有能力阅读英文书籍者请购买正版支持。
 
+This translation is for reference only for study and research, and may not be publicly distributed or used for commercial purposes. If you have the ability to read English books, please purchase genuine support.
+
 ## 推荐使用 Gitbook 阅读
 
 [https://emhlbmc.gitbook.io/presto-the-definitive-guide-zh](https://emhlbmc.gitbook.io/presto-the-definitive-guide-zh/)
