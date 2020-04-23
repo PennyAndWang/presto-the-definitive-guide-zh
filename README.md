@@ -30,8 +30,8 @@
 
 * [一、开始使用 Presto](getting-started-with-presto/)
   * [1. Presto 介绍](getting-started-with-presto/introducing-presto.md)
-  * [2. Presto 安装配置](getting-started-with-presto/installing-and-configuring-presto.md)
-  * [3. 使用 Presto](getting-started-with-presto/using-presto.md)
+  * [2. Presto 安装配置](https://emhlbmc.gitbook.io/presto-the-definitive-guide-zh/getting-started-with-presto/installing-and-configuring-presto)
+  * [3. 使用 Presto](https://emhlbmc.gitbook.io/presto-the-definitive-guide-zh/getting-started-with-presto/using-presto)
 * [二、深入理解 Presto](diving-deeper-into-presto/README.md)
   * [4. Presto 技术架构](diving-deeper-into-presto/presto-architecture.md)
   * [5. 生产环境部署](diving-deeper-into-presto/production-ready-deployment.md)
