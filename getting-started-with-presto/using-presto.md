@@ -75,7 +75,7 @@ USE [<catalog>.]<schema>
 
 首先，你可以查看有 catalog 配置了哪些数据源。`system` 是默认存在的内部数据源。
 
-在我们这个例子中，你可以看到 tpch：
+在我们这个例子中，你可以看到 `tpch`：
 
 ```text
 presto> SHOW CATALOGS;
@@ -329,25 +329,25 @@ Presto 没有定义具体是支持哪个版本的 ANSI SQL。实际上，我们�
 
 通过 Presto 可以直接查询关系型数据库，K-V 存储，以及对象存储。下面的概念是 Presto 中比较重要的：
 
-Connector
+_**Connector**_
 
 让 Presto 连接到一个数据源。每个 catalog 都是一种 connector 的实现。
 
-Catalog
+_**Catalog**_
 
 定义了如何连接到一个数据源，包括配置 connector 种类，schema 名称。
 
-Schema
+_**Schema**_
 
 组织 table 的一种方式。 catalog 和 table 共同定义了可被查询的 table。
 
-Table
+_**Table**_
 
 无序记录的集合，包含列的定义和数据类型。
 
 ### 简单举例
 
-Presto 默认包含名为 system 的  catalog。通过它可以查询一些元信息。
+Presto 默认包含名为 `system` 的  catalog。通过它可以查询一些元信息。
 
 列出可用的  catalog： 
 
@@ -360,7 +360,7 @@ SHOW CATALOGS;
  (2 rows)
 ```
 
-查询 tpch 中所有的 schema：
+查询 `tpch` 中所有的 schema：
 
 ```text
 SHOW SCHEMAS FROM tpch;
@@ -379,7 +379,7 @@ SHOW SCHEMAS FROM tpch;
 (10 rows)
 ```
 
-查询 sf1 中的表：
+查询 `sf1` 中的表：
 
 ```text
 SHOW TABLES FROM tpch.sf1;
@@ -396,7 +396,7 @@ SHOW TABLES FROM tpch.sf1;
 (8 rows)
 ```
 
-查询 region 表结构：
+查询 `region` 表结构：
 
 ```text
 DESCRIBE tpch.sf1.region;
@@ -408,9 +408,9 @@ DESCRIBE tpch.sf1.region;
 (3 rows)
 ```
 
-其他的语法，比如 USE，SHOW FUNCTIONS，都是可以用的。
+其他的语法，比如 `USE`，`SHOW FUNCTIONS`，都是可以用的。
 
-查询 region 表中的数据：
+查询 `region` 表中的数据：
 
 ```text
 SELECT name FROM tpch.sf1.region;
@@ -456,9 +456,9 @@ AND region.name LIKE 'AFRICA';
 (5 rows)
 ```
 
-可以通过 \| \| 符号连接字符串，也可以使用如 + 、- 的运算符。
+可以通过 `||` 符号连接字符串，也可以使用如 `+` 、`-` 的运算符。
 
-混合使用 join 和字符串连接：
+混合使用 `join` 和字符串连接：
 
 ```text
 SELECT nation.name || ' / ' || region.name AS Location
@@ -475,7 +475,7 @@ AND region.name LIKE 'AFRICA';
 (5 rows)
 ```
 
-此外，Presto 还支持非常丰富的函数，可以使用 SHOW FUNCTIONS 来查看。如，计算取整订单的平均价格：
+此外，Presto 还支持非常丰富的函数，可以使用 `SHOW FUNCTIONS` 来查看。如，计算取整订单的平均价格：
 
 ```text
 SELECT round(avg(totalprice)) AS average_price
